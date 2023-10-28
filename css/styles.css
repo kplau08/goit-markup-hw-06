@@ -242,6 +242,7 @@ h1 {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   display: flex;
   justify-content: right;
+  flex-direction: column;
 }
 
 .is-hidden {
@@ -266,6 +267,50 @@ h1 {
   border: 2px solid currentColor;
 }
 
+.service-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.input-label {
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.service-input {
+  width: 100%;
+  padding: 12px 40px;
+  border-color: 1px solid var(--navy-blue);
+  border-radius: 4px;
+  transition: 250ms;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-icon {
+  position: absolute;
+  top: 49%;
+  left: 15px;
+  fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-input:focus + .service-icon,
+.service-input:hover + .service-icon {
+  fill: var(--iris);
+}
+
+.service-input-text-area {
+  border: 1px solid var(--navy-blue);
+  border-radius: 4px;
+  transition: 250ms;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 16px;
+}
 /* END OF HERO SECTION */
 
 /* START OF VALUES SECTION */
